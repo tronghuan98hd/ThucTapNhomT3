@@ -1,6 +1,6 @@
 ﻿namespace DLPK.Gui
 {
-    partial class frm_bvpk
+    partial class frm_bs
     {
         /// <summary>
         /// Required designer variable.
@@ -33,10 +33,12 @@
             this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dànhChoBệnhNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dànhChoBácSĩToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnl_datlichkham = new System.Windows.Forms.Panel();
+            this.pnl_bs = new System.Windows.Forms.Panel();
+            this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.pnl_head.SuspendLayout();
             this.menu_head.SuspendLayout();
+            this.pnl_bs.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnl_head
@@ -56,7 +58,7 @@
             this.trangChủToolStripMenuItem,
             this.dànhChoBệnhNhânToolStripMenuItem,
             this.dànhChoBácSĩToolStripMenuItem});
-            this.menu_head.Location = new System.Drawing.Point(228, 9);
+            this.menu_head.Location = new System.Drawing.Point(234, 9);
             this.menu_head.Name = "menu_head";
             this.menu_head.Size = new System.Drawing.Size(315, 24);
             this.menu_head.TabIndex = 0;
@@ -80,36 +82,48 @@
             this.dànhChoBácSĩToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
             this.dànhChoBácSĩToolStripMenuItem.Text = "Dành cho Bác sĩ";
             // 
-            // panel1
+            // pnl_datlichkham
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 53);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 397);
-            this.panel1.TabIndex = 0;
+            this.pnl_datlichkham.BackColor = System.Drawing.Color.White;
+            this.pnl_datlichkham.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnl_datlichkham.Location = new System.Drawing.Point(0, 0);
+            this.pnl_datlichkham.Name = "pnl_datlichkham";
+            this.pnl_datlichkham.Size = new System.Drawing.Size(204, 397);
+            this.pnl_datlichkham.TabIndex = 2;
             // 
-            // panel2
+            // pnl_bs
             // 
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(576, 53);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(224, 397);
-            this.panel2.TabIndex = 0;
+            this.pnl_bs.BackColor = System.Drawing.Color.White;
+            this.pnl_bs.Controls.Add(this.vScrollBar1);
+            this.pnl_bs.Controls.Add(this.pnl_datlichkham);
+            this.pnl_bs.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_bs.Location = new System.Drawing.Point(0, 53);
+            this.pnl_bs.Name = "pnl_bs";
+            this.pnl_bs.Size = new System.Drawing.Size(800, 397);
+            this.pnl_bs.TabIndex = 3;
             // 
-            // frm_bvpk
+            // vScrollBar1
+            // 
+            this.vScrollBar1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.vScrollBar1.Location = new System.Drawing.Point(783, 0);
+            this.vScrollBar1.Name = "vScrollBar1";
+            this.vScrollBar1.Size = new System.Drawing.Size(17, 397);
+            this.vScrollBar1.TabIndex = 3;
+            // 
+            // frm_bs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnl_bs);
             this.Controls.Add(this.pnl_head);
-            this.Name = "frm_bvpk";
-            this.Text = "frm_bvpk";
+            this.Name = "frm_bs";
+            this.Text = "frm_bs";
             this.pnl_head.ResumeLayout(false);
             this.pnl_head.PerformLayout();
             this.menu_head.ResumeLayout(false);
             this.menu_head.PerformLayout();
+            this.pnl_bs.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -121,7 +135,8 @@
         private System.Windows.Forms.ToolStripMenuItem trangChủToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dànhChoBệnhNhânToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dànhChoBácSĩToolStripMenuItem;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnl_datlichkham;
+        private System.Windows.Forms.Panel pnl_bs;
+        private System.Windows.Forms.VScrollBar vScrollBar1;
     }
 }

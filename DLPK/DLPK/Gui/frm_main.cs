@@ -7,14 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DLPK.Gui;
 namespace DLPK
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
+        }
+
+        private void btn_ck_Click(object sender, EventArgs e)
+        {
+            frm_chuyenkhoa ck = new frm_chuyenkhoa();
+            this.Hide();
+            ck.ShowDialog();
+            this.Show();
+        }
+
+        private void btn_bs_Click(object sender, EventArgs e)
+        {
+            frmBacSi bacsi = new frmBacSi();
+            this.Hide();
+            bacsi.ShowDialog();
+            this.Show();
         }
     }
 }

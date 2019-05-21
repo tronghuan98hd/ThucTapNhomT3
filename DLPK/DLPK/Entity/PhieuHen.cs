@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DLPK.Entity
 {
-    class PhieuHen
+    public class PhieuHen
     {
         private int _MaBN;
         private int _MaBS;

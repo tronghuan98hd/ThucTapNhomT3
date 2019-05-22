@@ -54,7 +54,7 @@ namespace DLPK.DAO
             }
             return ListThoiGian;
         }
-        public bool PhieuHen_Select(BacSi bacSi, BenhNhan benhNhan, PhieuHen phieuHen)
+        public bool PhieuHen_Insert(BacSi bacSi, BenhNhan benhNhan, PhieuHen phieuHen)
         {
             try
             {

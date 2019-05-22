@@ -51,6 +51,7 @@
             this.txtTenBN = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbNgay = new System.Windows.Forms.Label();
             this.lbThoiGian = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lbTenBS = new System.Windows.Forms.Label();
@@ -136,6 +137,7 @@
             this.btnXacNhan.TabIndex = 46;
             this.btnXacNhan.Text = "Xác nhận";
             this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // btnHuy
             // 
@@ -166,10 +168,11 @@
             // 
             // dtpNgaySinh
             // 
-            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgaySinh.Location = new System.Drawing.Point(101, 109);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 22);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(208, 22);
             this.dtpNgaySinh.TabIndex = 12;
             // 
             // txtDiaChi
@@ -263,6 +266,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbNgay);
             this.panel1.Controls.Add(this.lbThoiGian);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.lbTenBS);
@@ -270,6 +274,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(315, 80);
             this.panel1.TabIndex = 5;
+            // 
+            // lbNgay
+            // 
+            this.lbNgay.AutoSize = true;
+            this.lbNgay.Location = new System.Drawing.Point(115, 33);
+            this.lbNgay.Name = "lbNgay";
+            this.lbNgay.Size = new System.Drawing.Size(35, 13);
+            this.lbNgay.TabIndex = 3;
+            this.lbNgay.Text = "label8";
             // 
             // lbThoiGian
             // 
@@ -352,5 +365,6 @@
         private System.Windows.Forms.Label lbThoiGian;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lbTenBS;
+        private System.Windows.Forms.Label lbNgay;
     }
 }

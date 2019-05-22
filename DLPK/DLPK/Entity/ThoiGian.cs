@@ -11,18 +11,21 @@ namespace DLPK.Entity
     {
         private int _MaTG;
         private string _Time;
+        private string _NgayKham;
         private int _MaBS;
         
         public ThoiGian()
         {
             _MaTG = -1;
             _Time = "";
+            _NgayKham = "";
             _MaBS = -1;
         }
-        public ThoiGian(int MaTG,string Time,int MaBS)
+        public ThoiGian(int MaTG,string Time,string NgayKham,int MaBS)
         {
             this._MaTG = MaTG;
             this._Time = Time;
+            this._NgayKham = NgayKham;
             this._MaBS = MaBS;
         }
         public ThoiGian(DataRow row)
@@ -51,6 +54,17 @@ namespace DLPK.Entity
             get
             {
                 return this._Time;
+            }
+        }
+        public string NgayKham
+        {
+            set
+            {
+                this._NgayKham = value;
+            }
+            get
+            {
+                return this._NgayKham;
             }
         }
         public int MaBS

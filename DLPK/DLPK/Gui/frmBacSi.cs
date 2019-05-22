@@ -50,8 +50,16 @@ namespace DLPK.Gui
         private void lsvBacSi_MouseClick(object sender, MouseEventArgs e)
         {
             flpTime.Controls.Clear();
+            cbLichKham.Items.Clear();
             string TenBS = lvBacSi.SelectedItems[0].SubItems[0].Text;
             BacSi bacSi = new BacSi(-1, TenBS, "", -1, -1, -1, "");
+            DataTable data = Bacsi.Select_NgayKham(bacSi);
+            for (int i = 0; i < data.Rows.Count ; i++)
+            {
+                DateTime Ngay = Convert.ToDateTime(data.Rows[i]["Ngay"].ToString());
+                string NgayKham = Ngay.ToString("dd/MM/yyyy");
+                cbLichKham.Items.Add(NgayKham);
+            }
             List<ThoiGian> ListThoiGian = Bacsi.ViewTime(bacSi);
             foreach (ThoiGian item in ListThoiGian)
             {
@@ -61,7 +69,7 @@ namespace DLPK.Gui
                 flpTime.Controls.Add(btn);
                 btn.Click += (object sender1, EventArgs ee) =>
                 {
-                    frmDatLich datLich = new frmDatLich(TenBS,item.Time);
+                    frmDatLich datLich = new frmDatLich(TenBS,item.Time,cbLichKham.Text);
                     datLich.ShowDialog();
                 };
             }
@@ -71,6 +79,13 @@ namespace DLPK.Gui
         {
             // LoadTime();
             Load_BacSi();
+        }
+
+        public void Load_NgayKham()
+        {
+            string TenBS = lvBacSi.SelectedItems[0].SubItems[0].Text;
+            BacSi bacSi = new BacSi(-1, TenBS, "", -1, -1, -1, "");
+            
         }
     }
 }

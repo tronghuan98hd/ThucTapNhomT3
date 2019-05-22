@@ -36,12 +36,12 @@ namespace DLPK.DAO
             }
             return ListBacSi;
         }
-        public DataTable ViewBS()
-        {
-            string query = "BacSi_Select";
-            DataTable result = DataProvider.Instance.ExecuteQuery(query);
-            return result;
-        }
+        //public DataTable ViewBS()
+        //{
+        //    string query = "BacSi_Select";
+        //    DataTable result = DataProvider.Instance.ExecuteQuery(query);
+        //    return result;
+        //}
         public List<ThoiGian> ViewTime(BacSi bacSi)
         {
             List<ThoiGian> ListThoiGian = new List<ThoiGian>();
@@ -54,17 +54,11 @@ namespace DLPK.DAO
             }
             return ListThoiGian;
         }
-        public bool PhieuHen_Insert(BacSi bacSi, BenhNhan benhNhan, PhieuHen phieuHen)
+        public DataTable Select_NgayKham(BacSi bacSi)
         {
-            try
-            {
-                string query = "BenhNhan_Select '" + bacSi.TenBS + "','" + benhNhan.TenBN + "','" + phieuHen.ThoiGian + "','" + phieuHen.GhiChu + "','" + benhNhan.GioiTinh + "','" + benhNhan.NgaySinh + "','" + benhNhan.SDT + "','" + benhNhan.Email + "','" + benhNhan.DiaChi + "'";
-                DataTable result = DataProvider.Instance.ExecuteQuery(query);
-                return true;
-            }
-            catch (Exception e)
-            { }
-            return false;
+            string query = "Select_NgayKham N'"+bacSi.TenBS+"'";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
         }
     }
 }

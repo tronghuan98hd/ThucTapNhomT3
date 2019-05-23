@@ -68,6 +68,12 @@
     <Compile Include="Gui\frmDatLich.Designer.cs">
       <DependentUpon>frmDatLich.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\frmPhieuHenRP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\frmPhieuHenRP.Designer.cs">
+      <DependentUpon>frmPhieuHenRP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\frm_bvpk.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Gui\frmDatLich.resx">
       <DependentUpon>frmDatLich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\frmPhieuHenRP.resx">
+      <DependentUpon>frmPhieuHenRP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\frm_bvpk.resx">
       <DependentUpon>frm_bvpk.cs</DependentUpon>

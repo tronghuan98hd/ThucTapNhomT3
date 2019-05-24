@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.pnl_head = new System.Windows.Forms.Panel();
-            this.menu_head = new System.Windows.Forms.MenuStrip();
-            this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dànhChoBệnhNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dànhChoBácSĩToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnXacNhan = new System.Windows.Forms.Button();
             this.btnHuy = new System.Windows.Forms.Button();
@@ -51,11 +47,10 @@
             this.txtTenBN = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbNgay = new System.Windows.Forms.Label();
             this.lbThoiGian = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lbTenBS = new System.Windows.Forms.Label();
-            this.pnl_head.SuspendLayout();
-            this.menu_head.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,43 +58,11 @@
             // pnl_head
             // 
             this.pnl_head.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pnl_head.Controls.Add(this.menu_head);
             this.pnl_head.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_head.Location = new System.Drawing.Point(0, 0);
             this.pnl_head.Name = "pnl_head";
             this.pnl_head.Size = new System.Drawing.Size(800, 53);
             this.pnl_head.TabIndex = 3;
-            // 
-            // menu_head
-            // 
-            this.menu_head.Dock = System.Windows.Forms.DockStyle.None;
-            this.menu_head.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trangChủToolStripMenuItem,
-            this.dànhChoBệnhNhânToolStripMenuItem,
-            this.dànhChoBácSĩToolStripMenuItem});
-            this.menu_head.Location = new System.Drawing.Point(228, 9);
-            this.menu_head.Name = "menu_head";
-            this.menu_head.Size = new System.Drawing.Size(315, 24);
-            this.menu_head.TabIndex = 0;
-            this.menu_head.Text = "menuStrip1";
-            // 
-            // trangChủToolStripMenuItem
-            // 
-            this.trangChủToolStripMenuItem.Name = "trangChủToolStripMenuItem";
-            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-            this.trangChủToolStripMenuItem.Text = "Trang Chủ";
-            // 
-            // dànhChoBệnhNhânToolStripMenuItem
-            // 
-            this.dànhChoBệnhNhânToolStripMenuItem.Name = "dànhChoBệnhNhânToolStripMenuItem";
-            this.dànhChoBệnhNhânToolStripMenuItem.Size = new System.Drawing.Size(130, 20);
-            this.dànhChoBệnhNhânToolStripMenuItem.Text = "Dành cho bệnh nhân";
-            // 
-            // dànhChoBácSĩToolStripMenuItem
-            // 
-            this.dànhChoBácSĩToolStripMenuItem.Name = "dànhChoBácSĩToolStripMenuItem";
-            this.dànhChoBácSĩToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
-            this.dànhChoBácSĩToolStripMenuItem.Text = "Dành cho Bác sĩ";
             // 
             // groupBox1
             // 
@@ -136,6 +99,7 @@
             this.btnXacNhan.TabIndex = 46;
             this.btnXacNhan.Text = "Xác nhận";
             this.btnXacNhan.UseVisualStyleBackColor = true;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacNhan_Click);
             // 
             // btnHuy
             // 
@@ -166,10 +130,11 @@
             // 
             // dtpNgaySinh
             // 
-            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgaySinh.CustomFormat = "dd/MM/yyyy";
+            this.dtpNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgaySinh.Location = new System.Drawing.Point(101, 109);
             this.dtpNgaySinh.Name = "dtpNgaySinh";
-            this.dtpNgaySinh.Size = new System.Drawing.Size(200, 22);
+            this.dtpNgaySinh.Size = new System.Drawing.Size(208, 22);
             this.dtpNgaySinh.TabIndex = 12;
             // 
             // txtDiaChi
@@ -263,6 +228,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbNgay);
             this.panel1.Controls.Add(this.lbThoiGian);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.lbTenBS);
@@ -270,6 +236,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(315, 80);
             this.panel1.TabIndex = 5;
+            // 
+            // lbNgay
+            // 
+            this.lbNgay.AutoSize = true;
+            this.lbNgay.Location = new System.Drawing.Point(115, 33);
+            this.lbNgay.Name = "lbNgay";
+            this.lbNgay.Size = new System.Drawing.Size(35, 13);
+            this.lbNgay.TabIndex = 3;
+            this.lbNgay.Text = "label8";
             // 
             // lbThoiGian
             // 
@@ -312,10 +287,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDatLich";
             this.Load += new System.EventHandler(this.frmDatLich_Load);
-            this.pnl_head.ResumeLayout(false);
-            this.pnl_head.PerformLayout();
-            this.menu_head.ResumeLayout(false);
-            this.menu_head.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -327,10 +298,6 @@
         #endregion
 
         private System.Windows.Forms.Panel pnl_head;
-        private System.Windows.Forms.MenuStrip menu_head;
-        private System.Windows.Forms.ToolStripMenuItem trangChủToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dànhChoBệnhNhânToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dànhChoBácSĩToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnXacNhan;
         private System.Windows.Forms.Button btnHuy;
@@ -352,5 +319,6 @@
         private System.Windows.Forms.Label lbThoiGian;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lbTenBS;
+        private System.Windows.Forms.Label lbNgay;
     }
 }

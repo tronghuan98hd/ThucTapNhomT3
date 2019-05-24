@@ -28,13 +28,17 @@ namespace DLPK.BLL
         {
             return Bacsi.BacSi_Select(chuyenKhoa);
         }
-        public DataTable ViewBS()
-        {
-            return Bacsi.ViewBS();
-        }
+        //public DataTable ViewBS()
+        //{
+        //    return Bacsi.ViewBS();
+        //}
         public List<ThoiGian> ViewTime(BacSi bacSi)
         {
             return Bacsi.ViewTime(bacSi);
+        }
+        public DataTable Select_NgayKham(BacSi bacSi)
+        {
+            return Bacsi.Select_NgayKham(bacSi);
         }
     }
 }

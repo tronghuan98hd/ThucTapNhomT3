@@ -40,15 +40,14 @@
             // 
             // gbLogin
             // 
-            this.gbLogin.Controls.Add(this.btnRegister);
-            this.gbLogin.Controls.Add(this.btnLogin);
+            this.gbLogin.Controls.Add(this.button1);
             this.gbLogin.Controls.Add(this.lbPassword);
             this.gbLogin.Controls.Add(this.lbAccount);
             this.gbLogin.Controls.Add(this.txtPassword);
             this.gbLogin.Controls.Add(this.textBox1);
             this.gbLogin.Location = new System.Drawing.Point(12, 12);
             this.gbLogin.Name = "gbLogin";
-            this.gbLogin.Size = new System.Drawing.Size(366, 198);
+            this.gbLogin.Size = new System.Drawing.Size(366, 211);
             this.gbLogin.TabIndex = 0;
             this.gbLogin.TabStop = false;
             this.gbLogin.Text = "Đăng nhập";
@@ -56,10 +55,10 @@
             // lbAccount
             // 
             this.lbAccount.AutoSize = true;
-            this.lbAccount.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAccount.Location = new System.Drawing.Point(6, 46);
             this.lbAccount.Name = "lbAccount";
-            this.lbAccount.Size = new System.Drawing.Size(113, 22);
+            this.lbAccount.Size = new System.Drawing.Size(112, 24);
             this.lbAccount.TabIndex = 1;
             this.lbAccount.Text = "TÀI KHOẢN";
             // 
@@ -74,10 +73,10 @@
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
-            this.lbPassword.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPassword.Location = new System.Drawing.Point(6, 87);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(107, 22);
+            this.lbPassword.Size = new System.Drawing.Size(108, 24);
             this.lbPassword.TabIndex = 1;
             this.lbPassword.Text = "MẬT KHẨU";
             // 
@@ -114,7 +113,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 222);
+            this.ClientSize = new System.Drawing.Size(390, 235);
             this.Controls.Add(this.gbLogin);
             this.Name = "frm_login";
             this.Text = "frm_login";

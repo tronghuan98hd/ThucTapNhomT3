@@ -35,14 +35,7 @@
             this.btn_bvpk = new System.Windows.Forms.Button();
             this.btn_bs = new System.Windows.Forms.Button();
             this.btn_ck = new System.Windows.Forms.Button();
-            this.pnl_head = new System.Windows.Forms.Panel();
-            this.menu_head = new System.Windows.Forms.MenuStrip();
-            this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dànhChoBệnhNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dànhChoBácSĩToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel3.SuspendLayout();
-            this.pnl_head.SuspendLayout();
-            this.menu_head.SuspendLayout();
             this.SuspendLayout();
             // 
             // vScrollBar1
@@ -56,7 +49,6 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(88)))), ((int)(((byte)(44)))), ((int)(((byte)(55)))));
-            this.panel3.Controls.Add(this.pnl_head);
             this.panel3.Controls.Add(this.btn_gktq);
             this.panel3.Controls.Add(this.btn_bvpk);
             this.panel3.Controls.Add(this.btn_bs);
@@ -106,48 +98,6 @@
             this.btn_ck.UseVisualStyleBackColor = true;
             this.btn_ck.Click += new System.EventHandler(this.btn_ck_Click);
             // 
-            // pnl_head
-            // 
-            this.pnl_head.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.pnl_head.Controls.Add(this.menu_head);
-            this.pnl_head.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_head.Location = new System.Drawing.Point(0, 0);
-            this.pnl_head.Name = "pnl_head";
-            this.pnl_head.Size = new System.Drawing.Size(782, 53);
-            this.pnl_head.TabIndex = 1;
-            // 
-            // menu_head
-            // 
-            this.menu_head.Dock = System.Windows.Forms.DockStyle.None;
-            this.menu_head.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.trangChủToolStripMenuItem,
-            this.dànhChoBệnhNhânToolStripMenuItem,
-            this.dànhChoBácSĩToolStripMenuItem});
-            this.menu_head.Location = new System.Drawing.Point(234, 9);
-            this.menu_head.Name = "menu_head";
-            this.menu_head.Size = new System.Drawing.Size(435, 24);
-            this.menu_head.TabIndex = 0;
-            this.menu_head.Text = "menuStrip1";
-            // 
-            // trangChủToolStripMenuItem
-            // 
-            this.trangChủToolStripMenuItem.Name = "trangChủToolStripMenuItem";
-            this.trangChủToolStripMenuItem.Size = new System.Drawing.Size(74, 20);
-            this.trangChủToolStripMenuItem.Text = "Trang Chủ";
-            // 
-            // dànhChoBệnhNhânToolStripMenuItem
-            // 
-            this.dànhChoBệnhNhânToolStripMenuItem.Name = "dànhChoBệnhNhânToolStripMenuItem";
-            this.dànhChoBệnhNhânToolStripMenuItem.Size = new System.Drawing.Size(130, 20);
-            this.dànhChoBệnhNhânToolStripMenuItem.Text = "Dành cho bệnh nhân";
-            this.dànhChoBệnhNhânToolStripMenuItem.Click += new System.EventHandler(this.dànhChoBệnhNhânToolStripMenuItem_Click);
-            // 
-            // dànhChoBácSĩToolStripMenuItem
-            // 
-            this.dànhChoBácSĩToolStripMenuItem.Name = "dànhChoBácSĩToolStripMenuItem";
-            this.dànhChoBácSĩToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
-            this.dànhChoBácSĩToolStripMenuItem.Text = "Dành cho Bác sĩ";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,10 +110,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.pnl_head.ResumeLayout(false);
-            this.pnl_head.PerformLayout();
-            this.menu_head.ResumeLayout(false);
-            this.menu_head.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -175,11 +121,6 @@
         private System.Windows.Forms.Button btn_bvpk;
         private System.Windows.Forms.Button btn_bs;
         private System.Windows.Forms.Button btn_ck;
-        private System.Windows.Forms.Panel pnl_head;
-        private System.Windows.Forms.MenuStrip menu_head;
-        private System.Windows.Forms.ToolStripMenuItem trangChủToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dànhChoBệnhNhânToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem dànhChoBácSĩToolStripMenuItem;
     }
 }
 

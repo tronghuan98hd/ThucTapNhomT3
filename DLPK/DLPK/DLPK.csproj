@@ -80,12 +80,6 @@
     <Compile Include="Gui\frm_bvpk.Designer.cs">
       <DependentUpon>frm_bvpk.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\frm_login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gui\frm_login.Designer.cs">
-      <DependentUpon>frm_login.cs</DependentUpon>
-    </Compile>
     <Compile Include="Gui\frm_main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,12 +98,6 @@
     <Compile Include="Gui\frm_chuyenkhoa.Designer.cs">
       <DependentUpon>frm_chuyenkhoa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gui\frm_register.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gui\frm_register.Designer.cs">
-      <DependentUpon>frm_register.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Gui\frmDatLich.resx">
@@ -124,17 +112,11 @@
     <EmbeddedResource Include="Gui\frm_chuyenkhoa.resx">
       <DependentUpon>frm_chuyenkhoa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Gui\frm_login.resx">
-      <DependentUpon>frm_login.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Gui\frm_main.resx">
       <DependentUpon>frm_main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\frmBacSi.resx">
       <DependentUpon>frmBacSi.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui\frm_register.resx">
-      <DependentUpon>frm_register.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

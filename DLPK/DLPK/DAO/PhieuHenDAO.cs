@@ -35,11 +35,5 @@ namespace DLPK.DAO
             { }
             return false;
         }
-        public DataTable PhieuHenChiTiet(string TenBN,int SDT)
-        {
-            string query = "PhieuHenChiTiet @TenBN , @SDT";
-            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { TenBN, SDT });
-            return result;
-        }
     }
 }

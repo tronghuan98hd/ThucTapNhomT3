@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2DC86FEE-FAD0-4AAC-B226-EDEE4489B488}</ProjectGuid>
+    <ProjectGuid>{32869FC2-8463-4E58-BBB8-CB5D1D9F1A0A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>DLPK</RootNamespace>
-    <AssemblyName>DLPK</AssemblyName>
+    <RootNamespace>BacSi</RootNamespace>
+    <AssemblyName>BacSi</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,75 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\BacSiBLL.cs" />
-    <Compile Include="BLL\ChuyenKhoaBLL.cs" />
-    <Compile Include="DAO\BacSiDAO.cs" />
-    <Compile Include="DAO\ChuyenKhoaDAO.cs" />
-    <Compile Include="DAO\DataProvider.cs" />
-    <Compile Include="Entity\BacSi.cs" />
-    <Compile Include="Entity\BenhNhan.cs" />
-    <Compile Include="Entity\ChuyenKhoa.cs" />
-    <Compile Include="Entity\GoiKhamTQ.cs" />
-    <Compile Include="Entity\LoaiGoi.cs" />
-    <Compile Include="Entity\PhieuHen.cs" />
-    <Compile Include="Entity\PhieuHenKhamTQ.cs" />
-    <Compile Include="Entity\PhongKham.cs" />
-    <Compile Include="Entity\ThoiGian.cs" />
-    <Compile Include="Gui\frmDatLich.cs">
+    <Compile Include="Form1.cs" />
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Gui\frmDatLich.Designer.cs">
-      <DependentUpon>frmDatLich.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Gui\frm_bvpk.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gui\frm_bvpk.Designer.cs">
-      <DependentUpon>frm_bvpk.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Gui\frm_login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gui\frm_login.Designer.cs">
+    <Compile Include="GUI\frm_login.Designer.cs">
       <DependentUpon>frm_login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Gui\frm_main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gui\frm_main.Designer.cs">
-      <DependentUpon>frm_main.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Gui\frmBacSi.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gui\frmBacSi.Designer.cs">
-      <DependentUpon>frmBacSi.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Gui\frm_chuyenkhoa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gui\frm_chuyenkhoa.Designer.cs">
-      <DependentUpon>frm_chuyenkhoa.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Gui\frmDatLich.resx">
-      <DependentUpon>frmDatLich.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui\frm_bvpk.resx">
-      <DependentUpon>frm_bvpk.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui\frm_chuyenkhoa.resx">
-      <DependentUpon>frm_chuyenkhoa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui\frm_login.resx">
+    <EmbeddedResource Include="GUI\frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui\frm_main.resx">
-      <DependentUpon>frm_main.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gui\frmBacSi.resx">
-      <DependentUpon>frmBacSi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -138,6 +83,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="DAO\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

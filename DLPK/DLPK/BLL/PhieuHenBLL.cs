@@ -29,9 +29,5 @@ namespace DLPK.BLL
         {
             return phieuhen.PhieuHen_Insert(bacSi, benhNhan, phieuHen);
         }
-        public DataTable PhieuHenChiTiet(string TenBN,int SDT)
-        {
-            return phieuhen.PhieuHenChiTiet(TenBN, SDT);
-        }
     }
 }

@@ -48,9 +48,11 @@
   <ItemGroup>
     <Compile Include="BLL\BacSiBLL.cs" />
     <Compile Include="BLL\ChuyenKhoaBLL.cs" />
+    <Compile Include="BLL\PhieuHenBLL.cs" />
     <Compile Include="DAO\BacSiDAO.cs" />
     <Compile Include="DAO\ChuyenKhoaDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\PhieuHenDAO.cs" />
     <Compile Include="Entity\BacSi.cs" />
     <Compile Include="Entity\BenhNhan.cs" />
     <Compile Include="Entity\ChuyenKhoa.cs" />
@@ -65,6 +67,12 @@
     </Compile>
     <Compile Include="Gui\frmDatLich.Designer.cs">
       <DependentUpon>frmDatLich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\frmPhieuHenRP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\frmPhieuHenRP.Designer.cs">
+      <DependentUpon>frmPhieuHenRP.cs</DependentUpon>
     </Compile>
     <Compile Include="Gui\frm_bvpk.cs">
       <SubType>Form</SubType>
@@ -106,6 +114,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Gui\frmDatLich.resx">
       <DependentUpon>frmDatLich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\frmPhieuHenRP.resx">
+      <DependentUpon>frmPhieuHenRP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\frm_bvpk.resx">
       <DependentUpon>frm_bvpk.cs</DependentUpon>

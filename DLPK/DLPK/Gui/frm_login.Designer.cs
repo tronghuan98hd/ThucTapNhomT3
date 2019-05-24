@@ -33,7 +33,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lbPassword = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.gbLogin.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,14 +89,25 @@
             this.txtPassword.Size = new System.Drawing.Size(228, 29);
             this.txtPassword.TabIndex = 0;
             // 
-            // button1
+            // btnLogin
             // 
-            this.button1.Location = new System.Drawing.Point(260, 147);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 48);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Đăng nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnLogin.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(260, 134);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(92, 48);
+            this.btnLogin.TabIndex = 2;
+            this.btnLogin.Text = "Đăng nhập";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            // 
+            // btnRegister
+            // 
+            this.btnRegister.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.Location = new System.Drawing.Point(26, 134);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(92, 48);
+            this.btnRegister.TabIndex = 2;
+            this.btnRegister.Text = "Đăng kí";
+            this.btnRegister.UseVisualStyleBackColor = true;
             // 
             // frm_login
             // 
@@ -116,8 +128,9 @@
         private System.Windows.Forms.GroupBox gbLogin;
         private System.Windows.Forms.Label lbAccount;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Label lbPassword;
         private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Button btnRegister;
     }
 }

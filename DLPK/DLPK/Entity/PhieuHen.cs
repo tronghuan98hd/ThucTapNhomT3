@@ -12,19 +12,22 @@ namespace DLPK.Entity
         private int _MaBS;
         private string _ThoiGian;
         private string _GhiChu;
+        private string _NgayKham;
         public PhieuHen()
         {
             _MaBN = -1;
             _MaBS = -1;
             _ThoiGian = "";
             _GhiChu = "";
+            _NgayKham = "";
         }
-        public PhieuHen(int MaBN,int MaBS,string ThoiGian,string GhiChu)
+        public PhieuHen(int MaBN,int MaBS,string ThoiGian,string GhiChu,string NgayKham)
         {
             this._MaBN = MaBN;
             this._MaBS = MaBS;
             this._ThoiGian = ThoiGian;
             this._GhiChu = GhiChu;
+            this._NgayKham = NgayKham;
         }
         public int MaBN
         {
@@ -68,6 +71,17 @@ namespace DLPK.Entity
             set
             {
                 this._GhiChu = value;
+            }
+        }
+        public string NgayKham
+        {
+            set
+            {
+                this._NgayKham = value;
+            }
+            get
+            {
+                return this._NgayKham;
             }
         }
     }

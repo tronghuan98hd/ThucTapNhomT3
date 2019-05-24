@@ -32,13 +32,5 @@ namespace DLPK
             bacsi.ShowDialog();
             this.Show();
         }
-
-        private void dànhChoBệnhNhânToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmPhieuHenRP frmPhieuHen = new frmPhieuHenRP();
-            this.Hide();
-            frmPhieuHen.ShowDialog();
-            this.Show();
-        }
     }
 }

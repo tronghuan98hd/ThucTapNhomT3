@@ -7,19 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DLPK.BLL;
+using DLPK.Entity;
+using DLPK.DAO;
 
 namespace DLPK.Gui
 {
     public partial class frmThongTinBacSi : Form
     {
+        
+
+        private string _TenDN;
         public frmThongTinBacSi()
         {
             InitializeComponent();
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
+        public void LoadThongtin()
         {
-
+           
         }
+        public frmThongTinBacSi(string TenDN) : this()
+        {
+            this._TenDN = TenDN;
+        }
+
     }
 }

@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btn_gktq = new System.Windows.Forms.Button();
-            this.btn_bvpk = new System.Windows.Forms.Button();
-            this.btn_bs = new System.Windows.Forms.Button();
-            this.btn_ck = new System.Windows.Forms.Button();
             this.pnl_head = new System.Windows.Forms.Panel();
             this.menu_head = new System.Windows.Forms.MenuStrip();
             this.trangChủToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dànhChoBệnhNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dànhChoBácSĩToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_gktq = new System.Windows.Forms.Button();
+            this.btn_bvpk = new System.Windows.Forms.Button();
+            this.btn_bs = new System.Windows.Forms.Button();
+            this.btn_ck = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.pnl_head.SuspendLayout();
             this.menu_head.SuspendLayout();
@@ -66,45 +66,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(782, 450);
             this.panel3.TabIndex = 5;
-            // 
-            // btn_gktq
-            // 
-            this.btn_gktq.Location = new System.Drawing.Point(609, 282);
-            this.btn_gktq.Name = "btn_gktq";
-            this.btn_gktq.Size = new System.Drawing.Size(119, 108);
-            this.btn_gktq.TabIndex = 0;
-            this.btn_gktq.Text = "Chọn gói khám tổng quát";
-            this.btn_gktq.UseVisualStyleBackColor = true;
-            // 
-            // btn_bvpk
-            // 
-            this.btn_bvpk.Location = new System.Drawing.Point(239, 282);
-            this.btn_bvpk.Name = "btn_bvpk";
-            this.btn_bvpk.Size = new System.Drawing.Size(119, 108);
-            this.btn_bvpk.TabIndex = 0;
-            this.btn_bvpk.Text = "Chọn Bệnh viện, Phòng khám";
-            this.btn_bvpk.UseVisualStyleBackColor = true;
-            // 
-            // btn_bs
-            // 
-            this.btn_bs.Location = new System.Drawing.Point(420, 282);
-            this.btn_bs.Name = "btn_bs";
-            this.btn_bs.Size = new System.Drawing.Size(119, 108);
-            this.btn_bs.TabIndex = 0;
-            this.btn_bs.Text = "Chọn Bác sĩ";
-            this.btn_bs.UseVisualStyleBackColor = true;
-            this.btn_bs.Click += new System.EventHandler(this.btn_bs_Click);
-            // 
-            // btn_ck
-            // 
-            this.btn_ck.AutoSize = true;
-            this.btn_ck.Location = new System.Drawing.Point(58, 282);
-            this.btn_ck.Name = "btn_ck";
-            this.btn_ck.Size = new System.Drawing.Size(119, 108);
-            this.btn_ck.TabIndex = 0;
-            this.btn_ck.Text = "Chọn Chuyên Khoa";
-            this.btn_ck.UseVisualStyleBackColor = true;
-            this.btn_ck.Click += new System.EventHandler(this.btn_ck_Click);
             // 
             // pnl_head
             // 
@@ -147,6 +108,46 @@
             this.dànhChoBácSĩToolStripMenuItem.Name = "dànhChoBácSĩToolStripMenuItem";
             this.dànhChoBácSĩToolStripMenuItem.Size = new System.Drawing.Size(103, 20);
             this.dànhChoBácSĩToolStripMenuItem.Text = "Dành cho Bác sĩ";
+            this.dànhChoBácSĩToolStripMenuItem.Click += new System.EventHandler(this.dànhChoBácSĩToolStripMenuItem_Click);
+            // 
+            // btn_gktq
+            // 
+            this.btn_gktq.Location = new System.Drawing.Point(609, 282);
+            this.btn_gktq.Name = "btn_gktq";
+            this.btn_gktq.Size = new System.Drawing.Size(119, 108);
+            this.btn_gktq.TabIndex = 0;
+            this.btn_gktq.Text = "Chọn gói khám tổng quát";
+            this.btn_gktq.UseVisualStyleBackColor = true;
+            // 
+            // btn_bvpk
+            // 
+            this.btn_bvpk.Location = new System.Drawing.Point(239, 282);
+            this.btn_bvpk.Name = "btn_bvpk";
+            this.btn_bvpk.Size = new System.Drawing.Size(119, 108);
+            this.btn_bvpk.TabIndex = 0;
+            this.btn_bvpk.Text = "Chọn Bệnh viện, Phòng khám";
+            this.btn_bvpk.UseVisualStyleBackColor = true;
+            // 
+            // btn_bs
+            // 
+            this.btn_bs.Location = new System.Drawing.Point(420, 282);
+            this.btn_bs.Name = "btn_bs";
+            this.btn_bs.Size = new System.Drawing.Size(119, 108);
+            this.btn_bs.TabIndex = 0;
+            this.btn_bs.Text = "Chọn Bác sĩ";
+            this.btn_bs.UseVisualStyleBackColor = true;
+            this.btn_bs.Click += new System.EventHandler(this.btn_bs_Click);
+            // 
+            // btn_ck
+            // 
+            this.btn_ck.AutoSize = true;
+            this.btn_ck.Location = new System.Drawing.Point(58, 282);
+            this.btn_ck.Name = "btn_ck";
+            this.btn_ck.Size = new System.Drawing.Size(119, 108);
+            this.btn_ck.TabIndex = 0;
+            this.btn_ck.Text = "Chọn Chuyên Khoa";
+            this.btn_ck.UseVisualStyleBackColor = true;
+            this.btn_ck.Click += new System.EventHandler(this.btn_ck_Click);
             // 
             // frmMain
             // 

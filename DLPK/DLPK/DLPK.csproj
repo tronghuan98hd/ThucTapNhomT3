@@ -46,9 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\AccountBLL.cs" />
     <Compile Include="BLL\BacSiBLL.cs" />
     <Compile Include="BLL\ChuyenKhoaBLL.cs" />
     <Compile Include="BLL\PhieuHenBLL.cs" />
+    <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\BacSiDAO.cs" />
     <Compile Include="DAO\ChuyenKhoaDAO.cs" />
     <Compile Include="DAO\DataProvider.cs" />

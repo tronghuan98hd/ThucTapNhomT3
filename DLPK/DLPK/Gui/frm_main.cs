@@ -40,5 +40,13 @@ namespace DLPK
             frmPhieuHen.ShowDialog();
             this.Show();
         }
+
+        private void dànhChoBácSĩToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_login login = new frm_login();
+            this.Hide();
+            login.ShowDialog();
+            this.Show();
+        }
     }
 }

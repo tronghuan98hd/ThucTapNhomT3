@@ -60,5 +60,11 @@ namespace DLPK.DAO
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result;
         }
+        public DataTable BacSi_ChiTiet(BacSi bacSi)
+        {
+            string query = "BacSi_ChiTiet N'"+bacSi.TenBS+"'";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result;
+        }
     }
 }

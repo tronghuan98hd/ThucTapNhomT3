@@ -40,5 +40,9 @@ namespace DLPK.BLL
         {
             return Bacsi.Select_NgayKham(bacSi);
         }
+        public DataTable BacSi_ChiTiet(BacSi bacSi)
+        {
+            return Bacsi.BacSi_ChiTiet(bacSi);
+        }
     }
 }

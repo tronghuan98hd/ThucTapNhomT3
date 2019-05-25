@@ -53,6 +53,11 @@ namespace DLPK.Gui
             cbLichKham.Items.Clear();
             string TenBS = lvBacSi.SelectedItems[0].SubItems[0].Text;
             BacSi bacSi = new BacSi(-1, TenBS, "", -1, -1, -1, "");
+            DataTable ChiTiet_BacSi = Bacsi.BacSi_ChiTiet(bacSi);
+            lbPhongKham.Text = ChiTiet_BacSi.Rows[0]["TenPK"].ToString();
+            lbDiaChi.Text = ChiTiet_BacSi.Rows[0]["DiaChi"].ToString();
+            lbGiaKham.Text = ChiTiet_BacSi.Rows[0]["GiaTien"].ToString();
+            lbMota.Text = ChiTiet_BacSi.Rows[0]["GhiChu"].ToString();
             DataTable data = Bacsi.Select_NgayKham(bacSi);
             for (int i = 0; i < data.Rows.Count ; i++)
             {

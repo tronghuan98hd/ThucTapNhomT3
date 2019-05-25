@@ -47,6 +47,8 @@
             this.cbLichKham = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lvBacSi = new System.Windows.Forms.ListView();
+            this.lbMota = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.pnl_head.SuspendLayout();
             this.menu_head.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -129,11 +131,13 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 115);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(811, 335);
+            this.panel2.Size = new System.Drawing.Size(811, 420);
             this.panel2.TabIndex = 4;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lbMota);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.lbGiaKham);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.lbDiaChi);
@@ -144,7 +148,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(387, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(421, 326);
+            this.groupBox1.Size = new System.Drawing.Size(421, 411);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chi tiết đặt lịch";
@@ -154,9 +158,8 @@
             this.lbGiaKham.AutoSize = true;
             this.lbGiaKham.Location = new System.Drawing.Point(81, 278);
             this.lbGiaKham.Name = "lbGiaKham";
-            this.lbGiaKham.Size = new System.Drawing.Size(35, 13);
+            this.lbGiaKham.Size = new System.Drawing.Size(0, 13);
             this.lbGiaKham.TabIndex = 7;
-            this.lbGiaKham.Text = "label3";
             // 
             // label3
             // 
@@ -172,18 +175,16 @@
             this.lbDiaChi.AutoSize = true;
             this.lbDiaChi.Location = new System.Drawing.Point(81, 231);
             this.lbDiaChi.Name = "lbDiaChi";
-            this.lbDiaChi.Size = new System.Drawing.Size(35, 13);
+            this.lbDiaChi.Size = new System.Drawing.Size(0, 13);
             this.lbDiaChi.TabIndex = 5;
-            this.lbDiaChi.Text = "label3";
             // 
             // lbPhongKham
             // 
             this.lbPhongKham.AutoSize = true;
             this.lbPhongKham.Location = new System.Drawing.Point(81, 197);
             this.lbPhongKham.Name = "lbPhongKham";
-            this.lbPhongKham.Size = new System.Drawing.Size(35, 13);
+            this.lbPhongKham.Size = new System.Drawing.Size(0, 13);
             this.lbPhongKham.TabIndex = 4;
-            this.lbPhongKham.Text = "label3";
             // 
             // label2
             // 
@@ -223,17 +224,34 @@
             this.lvBacSi.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvBacSi.Location = new System.Drawing.Point(3, 3);
             this.lvBacSi.Name = "lvBacSi";
-            this.lvBacSi.Size = new System.Drawing.Size(378, 329);
+            this.lvBacSi.Size = new System.Drawing.Size(378, 414);
             this.lvBacSi.TabIndex = 0;
             this.lvBacSi.UseCompatibleStateImageBehavior = false;
             this.lvBacSi.View = System.Windows.Forms.View.List;
             this.lvBacSi.MouseClick += new System.Windows.Forms.MouseEventHandler(this.lsvBacSi_MouseClick);
             // 
+            // lbMota
+            // 
+            this.lbMota.AutoSize = true;
+            this.lbMota.Location = new System.Drawing.Point(81, 307);
+            this.lbMota.Name = "lbMota";
+            this.lbMota.Size = new System.Drawing.Size(0, 13);
+            this.lbMota.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(26, 307);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Chi tiết: ";
+            // 
             // frmBacSi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(811, 450);
+            this.ClientSize = new System.Drawing.Size(811, 535);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_head);
@@ -274,5 +292,7 @@
         private System.Windows.Forms.ComboBox cbLichKham;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flpTime;
+        private System.Windows.Forms.Label lbMota;
+        private System.Windows.Forms.Label label5;
     }
 }

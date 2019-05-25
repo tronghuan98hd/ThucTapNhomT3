@@ -56,7 +56,7 @@ namespace DLPK.Gui
             PhieuHen phieuHen = new PhieuHen(-1, -1, lbThoiGian.Text, GhiChu, converted);
             if(phieuhen.PhieuHen_Insert(bacSi, benhNhan, phieuHen)==true)
             {
-                MessageBox.Show("Đặt lịch thành công!","Thông báo");
+                MessageBox.Show("Đặt lịch thành công, chi tiết xem tại mục dành cho bệnh nhân","Thông báo");
             }
             else
             {

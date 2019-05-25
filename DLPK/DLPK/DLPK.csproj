@@ -74,6 +74,12 @@
     <Compile Include="Gui\frmPhieuHenRP.Designer.cs">
       <DependentUpon>frmPhieuHenRP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Gui\frmThongTinBacSi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\frmThongTinBacSi.Designer.cs">
+      <DependentUpon>frmThongTinBacSi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\frm_bvpk.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\frmPhieuHenRP.resx">
       <DependentUpon>frmPhieuHenRP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\frmThongTinBacSi.resx">
+      <DependentUpon>frmThongTinBacSi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gui\frm_bvpk.resx">
       <DependentUpon>frm_bvpk.cs</DependentUpon>

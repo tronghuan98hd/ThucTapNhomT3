@@ -29,7 +29,7 @@ namespace DLPK.Gui
             {
                 lvChuyenKhoa.Items.Add(item.TenKhoa);
             }
-        }
+        } 
 
         private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
         {

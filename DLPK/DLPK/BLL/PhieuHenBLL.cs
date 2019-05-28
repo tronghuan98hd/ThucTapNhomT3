@@ -33,5 +33,9 @@ namespace DLPK.BLL
         {
             return phieuhen.PhieuHenChiTiet(TenBN, SDT);
         }
+        public bool PhieuHen_Delete(string TenBS,string TenBN)
+        {
+            return phieuhen.PhieuHen_Delete(TenBS, TenBN);
+        }
     }
 }

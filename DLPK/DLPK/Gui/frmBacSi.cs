@@ -87,5 +87,10 @@ namespace DLPK.Gui
             BacSi bacSi = new BacSi(-1, TenBS, "", -1, -1, -1, "");
             
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

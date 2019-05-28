@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgLichHen = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnLichKham = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -42,21 +42,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtGiaTien = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtTenBS = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtChucVu = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lbTenBN = new System.Windows.Forms.Label();
-            this.lbNgayKham = new System.Windows.Forms.Label();
-            this.lbGioKham = new System.Windows.Forms.Label();
-            this.lbLyDo = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtTenBS = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgLichHen)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,15 +64,7 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
-            this.groupBox2.Controls.Add(this.lbLyDo);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.lbGioKham);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.lbNgayKham);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.lbTenBN);
-            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.dtgLichHen);
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(440, 0);
             this.groupBox2.Name = "groupBox2";
@@ -89,13 +73,13 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chi tiết lịch hẹn";
             // 
-            // dataGridView1
+            // dtgLichHen
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 19);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(436, 220);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgLichHen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgLichHen.Location = new System.Drawing.Point(6, 19);
+            this.dtgLichHen.Name = "dtgLichHen";
+            this.dtgLichHen.Size = new System.Drawing.Size(436, 220);
+            this.dtgLichHen.TabIndex = 0;
             // 
             // groupBox1
             // 
@@ -129,6 +113,7 @@
             this.btnLichKham.TabIndex = 45;
             this.btnLichKham.Text = "Quản lý lịch khám";
             this.btnLichKham.UseVisualStyleBackColor = true;
+            this.btnLichKham.Click += new System.EventHandler(this.btnLichKham_Click);
             // 
             // btnSave
             // 
@@ -207,6 +192,22 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Giá khám";
             // 
+            // txtTenBS
+            // 
+            this.txtTenBS.Location = new System.Drawing.Point(107, 51);
+            this.txtTenBS.Name = "txtTenBS";
+            this.txtTenBS.Size = new System.Drawing.Size(293, 20);
+            this.txtTenBS.TabIndex = 1;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(31, 54);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 13);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Tên bác sĩ";
+            // 
             // txtChucVu
             // 
             this.txtChucVu.Location = new System.Drawing.Point(107, 93);
@@ -223,94 +224,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Chức vụ";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 274);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tên bệnh nhân";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 307);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Ngày khám";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(12, 339);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Giờ khám";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(12, 369);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(62, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Lý do khám";
-            // 
-            // lbTenBN
-            // 
-            this.lbTenBN.AutoSize = true;
-            this.lbTenBN.Location = new System.Drawing.Point(98, 274);
-            this.lbTenBN.Name = "lbTenBN";
-            this.lbTenBN.Size = new System.Drawing.Size(80, 13);
-            this.lbTenBN.TabIndex = 0;
-            this.lbTenBN.Text = "Tên bệnh nhân";
-            // 
-            // lbNgayKham
-            // 
-            this.lbNgayKham.AutoSize = true;
-            this.lbNgayKham.Location = new System.Drawing.Point(98, 307);
-            this.lbNgayKham.Name = "lbNgayKham";
-            this.lbNgayKham.Size = new System.Drawing.Size(61, 13);
-            this.lbNgayKham.TabIndex = 0;
-            this.lbNgayKham.Text = "Ngày khám";
-            // 
-            // lbGioKham
-            // 
-            this.lbGioKham.AutoSize = true;
-            this.lbGioKham.Location = new System.Drawing.Point(98, 339);
-            this.lbGioKham.Name = "lbGioKham";
-            this.lbGioKham.Size = new System.Drawing.Size(52, 13);
-            this.lbGioKham.TabIndex = 0;
-            this.lbGioKham.Text = "Giờ khám";
-            // 
-            // lbLyDo
-            // 
-            this.lbLyDo.AutoSize = true;
-            this.lbLyDo.Location = new System.Drawing.Point(98, 369);
-            this.lbLyDo.Name = "lbLyDo";
-            this.lbLyDo.Size = new System.Drawing.Size(62, 13);
-            this.lbLyDo.TabIndex = 0;
-            this.lbLyDo.Text = "Lý do khám";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(31, 54);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 13);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Tên bác sĩ";
-            // 
-            // txtTenBS
-            // 
-            this.txtTenBS.Location = new System.Drawing.Point(107, 51);
-            this.txtTenBS.Name = "txtTenBS";
-            this.txtTenBS.Size = new System.Drawing.Size(293, 20);
-            this.txtTenBS.TabIndex = 1;
-            // 
             // frmThongTinBacSi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -319,10 +232,10 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmThongTinBacSi";
             this.Text = "frmThongTinBacSi";
+            this.Load += new System.EventHandler(this.frmThongTinBacSi_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgLichHen)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -337,24 +250,16 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtChucVu;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtGhiChu;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgLichHen;
         private System.Windows.Forms.Button btnLichKham;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtTenKhoa;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtTenPK;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbLyDo;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lbGioKham;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lbNgayKham;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lbTenBN;
         private System.Windows.Forms.TextBox txtTenBS;
         private System.Windows.Forms.Label label10;
     }

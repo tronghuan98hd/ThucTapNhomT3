@@ -64,6 +64,12 @@
     <Compile Include="Entity\PhieuHenKhamTQ.cs" />
     <Compile Include="Entity\PhongKham.cs" />
     <Compile Include="Entity\ThoiGian.cs" />
+    <Compile Include="Gui\frmDangKyLichKham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\frmDangKyLichKham.Designer.cs">
+      <DependentUpon>frmDangKyLichKham.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gui\frmDatLich.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Gui\frmDangKyLichKham.resx">
+      <DependentUpon>frmDangKyLichKham.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Gui\frmDatLich.resx">
       <DependentUpon>frmDatLich.cs</DependentUpon>
     </EmbeddedResource>

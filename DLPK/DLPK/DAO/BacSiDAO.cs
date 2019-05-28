@@ -42,10 +42,10 @@ namespace DLPK.DAO
         //    DataTable result = DataProvider.Instance.ExecuteQuery(query);
         //    return result;
         //}
-        public List<ThoiGian> ViewTime(BacSi bacSi)
+        public List<ThoiGian> ViewTime(BacSi bacSi,ThoiGian thoiGian)
         {
             List<ThoiGian> ListThoiGian = new List<ThoiGian>();
-            string query = "ThongTinDatPhong N'"+bacSi.TenBS+"'";
+            string query = "ThongTinDatPhong N'"+bacSi.TenBS+"' , '"+thoiGian.NgayKham+"'";
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             foreach (DataRow item in result.Rows)
             {
@@ -65,6 +65,18 @@ namespace DLPK.DAO
             string query = "BacSi_ChiTiet N'"+bacSi.TenBS+"'";
             DataTable result = DataProvider.Instance.ExecuteQuery(query);
             return result;
+        }
+        public DataTable LichHen_BacSi(string TenDN)
+        {
+            string query = "PhieuHen_BacSi @TenDN";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { TenDN });
+            return result;
+        }
+        public bool ThoiGian_Select(BacSi bacSi,ThoiGian thoiGian )
+        {
+            string query = "ThoiGian_Select  N'"+bacSi.TenBS+"' , '"+thoiGian.NgayKham+ "' , '" + thoiGian.Time + "'";
+            DataTable result = DataProvider.Instance.ExecuteQuery(query);
+            return result.Rows.Count > 0;
         }
     }
 }

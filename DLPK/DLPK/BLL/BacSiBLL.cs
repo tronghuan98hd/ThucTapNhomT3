@@ -32,9 +32,9 @@ namespace DLPK.BLL
         //{
         //    return Bacsi.ViewBS();
         //}
-        public List<ThoiGian> ViewTime(BacSi bacSi)
+        public List<ThoiGian> ViewTime(BacSi bacSi,ThoiGian thoiGian)
         {
-            return Bacsi.ViewTime(bacSi);
+            return Bacsi.ViewTime(bacSi,thoiGian);
         }
         public DataTable Select_NgayKham(BacSi bacSi)
         {
@@ -43,6 +43,14 @@ namespace DLPK.BLL
         public DataTable BacSi_ChiTiet(BacSi bacSi)
         {
             return Bacsi.BacSi_ChiTiet(bacSi);
+        }
+        public DataTable PhieuHen_BacSi(string TenDN)
+        {
+            return Bacsi.LichHen_BacSi(TenDN);
+        }
+        public bool ThoiGian_Insert(BacSi bacSi,ThoiGian thoiGian)
+        {
+            return Bacsi.ThoiGian_Select(bacSi, thoiGian);
         }
     }
 }

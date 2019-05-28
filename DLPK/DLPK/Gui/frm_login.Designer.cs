@@ -118,6 +118,7 @@
             this.ClientSize = new System.Drawing.Size(390, 222);
             this.Controls.Add(this.gbLogin);
             this.Name = "frm_login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frm_login";
             this.gbLogin.ResumeLayout(false);
             this.gbLogin.PerformLayout();

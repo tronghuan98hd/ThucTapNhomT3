@@ -26,9 +26,9 @@ namespace DLPK.Gui
             string MatKhau = txtMatKhau.Text.Trim();
             if (account.Login(TenDN,MatKhau))
             {
-                frmThongTinBacSi frmThongTinBacSi = new frmThongTinBacSi();
+                frmThongTinBacSi thongTinBacSi = new frmThongTinBacSi(txtTenDN.Text);
                 this.Hide();
-                frmThongTinBacSi.ShowDialog(txtTenDN.Text.Trim());
+                thongTinBacSi.ShowDialog();
                 this.Show();
             }
             else

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DLPK.BLL;
 using DLPK.Entity;
 using DLPK.DAO;
+using System.Globalization;
+
 namespace DLPK.Gui
 {
     
@@ -36,7 +38,6 @@ namespace DLPK.Gui
             //    lvBacSi.Items.Add(data.Rows[i]["TenBS"].ToString());
             //}
         }
-
         private void trangChủToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmMain main = new frmMain();
@@ -52,6 +53,7 @@ namespace DLPK.Gui
             flpTime.Controls.Clear();
             cbLichKham.Items.Clear();
             string TenBS = lvBacSi.SelectedItems[0].SubItems[0].Text;
+            lbTenBS.Text = TenBS;
             BacSi bacSi = new BacSi(-1, TenBS, "", -1, -1, -1, "");
             DataTable ChiTiet_BacSi = Bacsi.BacSi_ChiTiet(bacSi);
             lbPhongKham.Text = ChiTiet_BacSi.Rows[0]["TenPK"].ToString();
@@ -59,25 +61,13 @@ namespace DLPK.Gui
             lbGiaKham.Text = ChiTiet_BacSi.Rows[0]["GiaTien"].ToString();
             lbMota.Text = ChiTiet_BacSi.Rows[0]["GhiChu"].ToString();
             DataTable data = Bacsi.Select_NgayKham(bacSi);
-            for (int i = 0; i < data.Rows.Count ; i++)
+            for (int i = 0; i < data.Rows.Count; i++)
             {
                 DateTime Ngay = Convert.ToDateTime(data.Rows[i]["Ngay"].ToString());
                 string NgayKham = Ngay.ToString("dd/MM/yyyy");
                 cbLichKham.Items.Add(NgayKham);
             }
-            List<ThoiGian> ListThoiGian = Bacsi.ViewTime(bacSi);
-            foreach (ThoiGian item in ListThoiGian)
-            {
-                Button btn = new Button() { Width = BacSiDAO.TimeWight, Height = BacSiDAO.TimeHight };
-                btn.Text = item.Time;
-                btn.BackColor = Color.Green;
-                flpTime.Controls.Add(btn);
-                btn.Click += (object sender1, EventArgs ee) =>
-                {
-                    frmDatLich datLich = new frmDatLich(TenBS,item.Time,cbLichKham.Text);
-                    datLich.ShowDialog();
-                };
-            }
+            
         }
 
         private void frmBacSi_Load(object sender, EventArgs e)
@@ -91,6 +81,29 @@ namespace DLPK.Gui
             string TenBS = lvBacSi.SelectedItems[0].SubItems[0].Text;
             BacSi bacSi = new BacSi(-1, TenBS, "", -1, -1, -1, "");
             
+        }
+
+        private void cbLichKham_SelectedValueChanged(object sender, EventArgs e)
+        {
+            flpTime.Controls.Clear();
+            BacSi bacSi = new BacSi(-1, lbTenBS.Text, "", -1, -1, -1, "");
+            string[] formats = {"dd/MM/yyyy", "dd-MMM-yyyy", "yyyy-MM-dd",
+                   "dd-MM-yyyy", "M/d/yyyy", "dd MMM yyyy"};
+            string converted = DateTime.ParseExact(cbLichKham.Text, formats, CultureInfo.InvariantCulture, DateTimeStyles.None).ToString("MM/dd/yyyy");
+            ThoiGian thoiGian = new ThoiGian(-1, "", converted, -1);
+            List<ThoiGian> ListThoiGian = Bacsi.ViewTime(bacSi, thoiGian);
+            foreach (ThoiGian item in ListThoiGian)
+            {
+                Button btn = new Button() { Width = BacSiDAO.TimeWight, Height = BacSiDAO.TimeHight };
+                btn.Text = item.Time;
+                btn.BackColor = Color.Green;
+                flpTime.Controls.Add(btn);
+                btn.Click += (object sender1, EventArgs ee) =>
+                {
+                    frmDatLich datLich = new frmDatLich(lbTenBS.Text, item.Time, cbLichKham.Text);
+                    datLich.ShowDialog();
+                };
+            }
         }
     }
 }

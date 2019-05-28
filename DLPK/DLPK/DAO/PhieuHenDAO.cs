@@ -41,5 +41,17 @@ namespace DLPK.DAO
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { TenBN, SDT });
             return result;
         }
+        public bool PhieuHen_Delete(string TenBS,string TenBN)
+        {
+            try
+            {
+                string query = "PhieuHen_Delete @TenBN , @TenBS";
+                DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { TenBN, TenBS });
+                return true;
+            }
+            catch(Exception e)
+            { }
+            return false;
+        }
     }
 }
